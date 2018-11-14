@@ -1,0 +1,73 @@
+body{
+  background-image: url(./img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  margin: 0px;
+  color: #fff;
+}
+header h1{
+	font-size: 50px;
+	font-weight: bold;
+}
+.c1{
+	border: 2px solid yellow;
+	background: red;
+	color: yellow;
+	width: 300px;
+	height:40px;
+	border-radius: 5px 5px 0 0;
+	margin-top: 42px;
+	border-bottom: 0;
+}
+.num{
+  	display: inline-flex;
+	height: 310px;
+	border: 3px solid yellow;
+	border-radius: 5px;
+	font-size: 250px;
+	background: #5F4C0B;
+	padding-left: 7px;
+}
+.num1{
+  width: 190px;
+  height: 290px;
+  margin-right: 7px;
+  margin-top: 7px;
+  border-style: solid ;
+  border-color: #B18904;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #B18904;
+}
+.num1:hover{
+	border: 2px solid yellow;
+	background: #FFBF00;
+}
+.letter div{
+	color: #fff;
+	margin-top: 20px;
+	font-size: 30px;
+}
+.num i{
+	position: relative;
+	bottom: 70px;
+	font-size: 20px;
+	opacity: 0.5;
+}
+.letter button{
+	border: none;
+	background-color: yellow;
+	font-weight: bold;
+	font-size: 25px;
+	width: 200px;
+	height: 60px;
+	border-radius: 5px;
+	margin-bottom: 100px;
+}
+.letter button:hover{
+	background: #FFBF00;
+}
+.letter div i{
+	font-size: 10px;
+}

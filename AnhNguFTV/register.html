@@ -1,0 +1,204 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta charset=utf-8>
+    <script type="text/javascript">
+		function checked ()
+		{
+			var user=document.getElementById("user").value;
+			var phone=document.getElementById("phone").value;
+			var pass=document.getElementById("pass").value;
+			//user
+			if(user == "")
+			{
+				document.getElementById("us").innerHTML="Name rỗng !!!";
+				return  false;
+			}
+			//phone
+			if(isNaN(phone) == true)
+			{
+				document.getElementById("ph").innerHTML="Phone phải là số!!!";
+				return false;
+			}
+			//pass
+			var pos=/[A-Z]/;
+			var pos2=/[!,@,#,$,%,^,&,*,(,),.]/;
+			var result=pos.test(pass);
+			var result2=pos2.test(pass);
+			if(pass.length < 6 || pass.length >18)
+			{
+				document.getElementById("pa").innerHTML="PassWord chỉ từ 6 > 18 ký tự";
+				return false;	
+			}
+			if(result == false)
+			{
+				document.getElementById("pa").innerHTML="PassWord phải có ký tự hoa";
+				return false;	
+			}
+			if(result2 == true)
+			{
+				document.getElementById("pa").innerHTML="PassWord ko có ký tự đặc biệt";
+				return false;
+			}
+			//email
+			var x=document.getElementById("email").value;
+			var atpos=x.indexOf("@");
+			var dotpos=x.lastIndexOf(".");
+			if(atpos < 4 || dotpos < atpos + 2 || dotpos + 2 >= x.length)
+			{
+					document.getElementById("em").innerHTML="Email ko hợp lệ !!!";
+					return false;
+			}
+			//giới tính
+			var radio=document.getElementById("gender").value;
+			if(radio =="")
+			{
+				document.getElementById("rd").innerHTML="Bạn chưa chọn giới tính !!!";
+				return false;	
+			}
+		}
+	</script>
+</head>
+<body>
+<div class="header">
+		<div id="banner">
+				<div id="logo"></div>
+		<div id="text">
+				Anh Ngữ FTV</div>
+	
+		<div class="menu">
+			<ul>
+				<li> <a href="ck.html"> Giới Thiệu</a>
+					<ul> 
+						<li><a href="">Thông điệp</a></li>
+						<li><a href="">Người sáng lập</a> </li>
+					</ul>
+				</li>
+				<li> <a href="box/20boxtable.html">Góc học tập</a> </li>
+				<li> <a href="register.html">Đăng kí</a></li>
+				<li><a href=" "> Tài liệu</a></li>
+				<li><a href=" "> Liên hệ</a></li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+<div id="wraper">
+	
+	
+	<div id="content">
+		<div class="tieude">ĐĂNG KÍ</div>
+		<form method="post">
+        	<table border=1 id="table">
+            	<tr>
+                	<th id="title" colspan="2" height="50" style="background:#03C;">Form Đăng Ký</th>
+                </tr>
+            	<tr>
+                	<td class="ten">Name :</td>
+                    <td class="right"><input id="user" type="text" name="username" size="30" /><span id="us"></span></td>
+                </tr>
+                <tr>
+                	<td class="ten">Phone :</td>
+                    <td class="right"><input id="phone" type="text" name="phone" size="20" /><span id="ph"></span></td>
+                </tr>
+                <tr>
+                	<td class="ten">PassWord :</td>
+                    <td class="right"><input id="pass" type="text" name="password" size="30" /><span id="pa"></span></td>
+                </tr>
+                <tr>
+                	<td class="ten">Email :</td>
+                    <td class="right"><input id="email" type="text" name="email" size="30" /><span id="em"></span></td>
+                </tr>
+                <tr>
+                	<td class="ten">Giới tính :</td>
+                	<td class="right">
+                    	<input id="gender" type="radio" name="gender"  value="1" />Nam
+                       <input id="gender" type="radio" name="gender"  value="2" />Nữ
+                       <span id="rd"></span>
+                    </td>
+                </tr>
+                <tr>
+                	<th colspan="2">
+                    	<button type="submit" name="submit" value="Gửi Thông Tin" class="btn" onclick="return checked();" />
+                        <span>Submit</span>
+                        <button type="reset" name="reset" value="Nhập Lại" class="btn" />
+                        <span>Nhập Lại</span>
+                    </th>
+                </tr>
+            </table>
+        </form>
+	</div>
+	<div id="right">
+		<div class="box">
+			<div class="title">HỖ TRỢ TRỰC TUYẾN </div>
+			<span><img src="img/hotrotructuyen.png"></img></span><br>
+			<div style="float:left"><img src="img/icon_hotline.png" width="30px" height="30px" ></img></div>
+			<div style="color:red;float:left;">HOTLINE: 0904 244 166</div><br><br><hr>
+			<div style="text-align:center; font-weight:bold;">Mr Long 01288919555</div>
+			<div style="margin-left:120px"><img src="img/skype-status.png"></img></div>
+		
+		</div>
+		<div class="box">
+			<div class="title">TƯ VẤN</div>
+			<div class="img_box"><img  src="img/EC16.jpeg"></img></div>
+			<div class="text">Đánh giá giáo viên tiếng Anh theo năng lực</div>
+			<div class="text1"><p> Có một quan niệm phổ biến rằng giáo viên nước ngoài tốt hơn giáo viên bản địa. Tuy nhiên lại..<p></div>
+			<a class="readmore">Xem chi tiết</a><br>
+			<hr>
+			<div class="img_box" ><img src="img/Sus1.jpeg"></img></div>
+			<div class="text">Duy trì sự ổn định của chương trình</div>
+			<div class="text1"><p>Thường thì một học sinh có thể tham dự thêm một lớp tiếng Anh bên cạnh chương trình 
+			tiếng Anh.</p></div><br>
+			<a class="readmore">Xem chi tiết</a><br>
+		</div>
+		<div class="box">
+			<div class="title">KIẾN THỨC</div>
+			<div class="img_box"><img src="img/Coursebook1.jpeg"> </img></div>
+			<div class="text">Cần đánh giá chương trình, sách giáo khoa tiếng Anh</div>
+			<div class="text1"><p>Như chúng ta đều biết, đa số chương trình học ở các trung tâm ngoại ngữ tại Việt Nam sử.. </p></div>
+			<a class="readmore">Xem chi tiết</a><br>
+			<hr>
+			<div class="img_box"><img src="img/Classroom1.jpeg"></img></div>
+			<div class="text">Các môi trường ngôn ngữ và ảnh hưởng đối với người học </div>
+			<div class="text1"><p>Quá trình học ngôn ngữ có thể diễn ra trong các môi trường khác nhau về mặt ngôn ngữ. Người...
+			</p></div><br>
+			<a class="readmore">Xem chi tiết</a>
+		</div>
+		<div class="box">
+			<div class="title">CHIA SẼ</div>
+			<div class="img_box"><img src="img/Speaking1.png"> </img></div>
+			<div class="text">Âm trong tiếng Anh</div>
+			<div class="text1"><p>Không giống một số ngôn ngữ khác (như tiếng Mã Lai và Tây Ba Nha), ở đó có sự tương.. </p></div>
+			<a class="readmore">Xem chi tiết</a><br><br>
+			<hr>
+			<div class="img_box"><img src="img/EC16.jpeg"></img></div>
+			<div class="text">Đánh giá giáo viên tiếng Anh theo năng lực </div>
+			<div class="text1"><p>Có một quan niệm phổ biến rằng giáo viên nước ngoài tốt hơn giáo viên bản địa. Tuy nhiên lại...
+			</p></div><br>
+			<a class="readmore">Xem chi tiết</a>
+		</div>
+	
+	</div>
+	</div>
+	<div class="wraper_footer">
+		<div class="footer">
+			
+			<li id="">	<div class="title_footer">ANH NGỮ FTV<br></div>
+			<div class="text_footer">
+				<b>Địa chỉ: </b> Tầng 2, Số 206 Đường Mỹ Đình, Mỹ Đình I, Nam Từ Liêm, TP Hà Nội <br>
+				<b> Điện thoại: </b> 0904 244 166 <br>
+			</div>
+			</li>
+			<li class="widget_newsletterwidget">	<div class="title_footer">ĐĂNG KÍ ĐỂ NHẬN BÀI VIẾT<br></div>
+			<div class="text_footer">
+				<b>Đăng kí để nhận bài viết từ chúng tôi.</b><br>
+				<input type=text width=200 value="Họ Tên"></input><input type=text width=200 value="Email"></input
+			</div>
+			</li>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

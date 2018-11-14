@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script type="text/javascript">
+      var counter=0;
+      function num(){
+        var random= setInterval(function(){
+          counter++;
+          var spin1= Math.floor(Math.random()*10);
+          var spin2= Math.floor(Math.random()*10);
+          var spin3= Math.floor(Math.random()*10);
+          var spin4= Math.floor(Math.random()*10);
+          var spin5= Math.floor(Math.random()*10);
+          var spin6= Math.floor(Math.random()*10);
+
+          document.getElementById("ran1").innerHTML=spin1;
+          document.getElementById("ran2").innerHTML=spin2;
+          document.getElementById("ran3").innerHTML=spin3;
+          document.getElementById("ran4").innerHTML=spin4;
+          document.getElementById("ran5").innerHTML=spin5;
+          document.getElementById("ran6").innerHTML=spin6;
+		  
+          document.getElementById("ran1").style.backgroundColor="#"+(Math.random()*0xFFFFFF<<0).toString(16);
+          document.getElementById("ran2").style.backgroundColor="#"+(Math.random()*0xFFFFFF<<0).toString(16);
+          document.getElementById("ran3").style.backgroundColor="#"+(Math.random()*0xFFFFFF<<0).toString(16);
+          document.getElementById("ran4").style.backgroundColor="#"+(Math.random()*0xFFFFFF<<0).toString(16);
+          document.getElementById("ran5").style.backgroundColor="#"+(Math.random()*0xFFFFFF<<0).toString(16);
+          document.getElementById("ran6").style.backgroundColor="#"+(Math.random()*0xFFFFFF<<0).toString(16);
+
+
+          if(counter>10){
+          document.getElementById("ran1").style.backgroundColor="#B18904";
+          document.getElementById("ran2").style.backgroundColor="#B18904";
+          document.getElementById("ran3").style.backgroundColor="#B18904";
+          document.getElementById("ran4").style.backgroundColor="#B18904";
+          document.getElementById("ran5").style.backgroundColor="#B18904";
+          document.getElementById("ran6").style.backgroundColor="#B18904";
+
+            counter=0;
+            clearInterval(random);
+          }
+        },100);
+      };
+      var reload=document.getElementById("num");
+
+    </script>
+  </head>
+  <body>
+      <center>
+        <header>
+          <h1>Lucky Wheel</h1>
+        </header>
+        <section>
+          <article class="randomBox">
+            <div class="c1">
+        			<p>LUCKY NUMBERS</p>
+        	</div>
+        	<div class="num" id="num" onclick="window.location.reload()">
+        			<div class="num1" id="ran1"><i class="fa fa-diamond" aria-hidden="true"></i></div>
+        			<div class="num1" id="ran2"><i class="fa fa-diamond" aria-hidden="true"></i></div>
+        			<div class="num1" id="ran3"><i class="fa fa-diamond" aria-hidden="true"></i></div>
+        			<div class="num1" id="ran4"><i class="fa fa-diamond" aria-hidden="true"></i></div>
+        			<div class="num1" id="ran5"><i class="fa fa-diamond" aria-hidden="true"></i></div>
+        			<div class="num1" id="ran6"><i class="fa fa-diamond" aria-hidden="true"></i></div>
+        	</div>
+          </article>
+          <article class="letter">
+            <div>Press Spin To Get Numbers</div><br>
+      			<button id="button" onclick="num(); getRandomColor();">SPIN</button>
+          </article>
+        </section>
+    </center>
+  </body>
+</html>
